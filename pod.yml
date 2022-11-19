@@ -1,5 +1,5 @@
 ###we know that all the intraction to your k8s cluster happen through api
-apiVersion: v1
+apiVersion: v2
 kind: Pod
 metadata:
   name: myapp

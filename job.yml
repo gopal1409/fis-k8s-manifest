@@ -3,11 +3,17 @@ kind: Job
 metadata:
   name: node-app-job 
 spec:
-  completions: 2
+  #completions: 
+  #it will create one pod then it will create another pod and run your job
+  #parallelism: 2
+  #backoffLimit: 2
+  #in your job if you have error which dont allow your to run your job successfully. 
+  #it will stop creting error pod
   template:
     spec:
       containers: 
       - name: node-app-job 
         image: alpine 
-        command: ["echo", "test  app node"]
+        command: ["echo, test  app node"]
+        
       restartPolicy: Never

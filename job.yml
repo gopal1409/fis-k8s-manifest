@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Job 
+metadata:
+  name: node-app-job 
+spec:
+  template:
+    spec:
+      container: 
+      - name: node-app-job 
+        image: alpine 
+        command: ["echo, testp app node"]
+      restartPolicy: Never

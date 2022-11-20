@@ -5,7 +5,7 @@ metadata:
 spec:
   template:
     spec:
-      container: 
+      containers: 
       - name: node-app-job 
         image: alpine 
         command: ["echo, testp app node"]

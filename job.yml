@@ -6,9 +6,10 @@ spec:
   #completions: 
   #it will create one pod then it will create another pod and run your job
   #parallelism: 2
-  #backoffLimit: 2
+  backoffLimit: 2
   #in your job if you have error which dont allow your to run your job successfully. 
   #it will stop creting error pod
+
   template:
     spec:
       containers: 

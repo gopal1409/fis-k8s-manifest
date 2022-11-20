@@ -6,7 +6,8 @@ spec:
   #completions: 
   #it will create one pod then it will create another pod and run your job
   #parallelism: 2
-  backoffLimit: 2
+  #backoffLimit: 2
+  #activeDeadlineSeconds: 15
   #in your job if you have error which dont allow your to run your job successfully. 
   #it will stop creting error pod
 
@@ -15,6 +16,6 @@ spec:
       containers: 
       - name: node-app-job 
         image: alpine 
-        command: ["echo, test  app node"]
+        command: ["sleep","40"]
         
       restartPolicy: Never

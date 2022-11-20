@@ -8,5 +8,5 @@ spec:
       containers: 
       - name: node-app-job 
         image: alpine 
-        command: ["echo, testp app node"]
+        command: ["echo, "testp app node"]
       restartPolicy: Never

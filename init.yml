@@ -1,12 +1,10 @@
 ###we know that all the intraction to your k8s cluster happen through api
 apiVersion: v1
-####pod is a generic term
-#it will invoke the pod api which is like a wrapper to deploy our container workload
 kind: Pod #kubernetes entity
 metadata:
   name: myapp-pod #inside your k8s cluster we need to create a pod.  
 spec: 
-  initContainer:
+  initContainers:
   - name: init-myservice 
     image: busybox:1.28 
     command: ['sh','-c','until nslookup myservice; do echo wating for my service; sleep 5; done;']

@@ -5,5 +5,5 @@ metadata:
 data:
   mysql_usermgmt.sql: |
     DROP DATABASE IF EXISTS webappdb;
-    CREATE DATBASE webappdb; 
+    CREATE DATABASE webappdb; 
 

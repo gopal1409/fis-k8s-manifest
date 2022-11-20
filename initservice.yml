@@ -4,6 +4,6 @@ metadata:
   name: myservice 
 spec:
   ports:
-  - portocol: TCP
+  - protocol: TCP
     port: 80 
     targetPort: 9376

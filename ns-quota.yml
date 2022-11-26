@@ -9,7 +9,7 @@ spec:
     requests.memory: 1Gi 
     limits.cpu: "2" #inside your namespace all pod can consume max 2 core cpu and 2gb of ram
     limits.memory: 2Gi
-    pod: "4"
+    pods: "4"
     secrets: "10"
     service: "10"
     configmaps: "10"

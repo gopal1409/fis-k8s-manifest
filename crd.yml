@@ -43,9 +43,9 @@ spec:
   scope: Namespaced
   names:
     # plural name to be used in the URL: /apis/<group>/<version>/<plural>
-    plural: appconfig 
+    plural: appconfigs 
     # singular name to be used as an alias on the CLI and for display
-    singular: appconfig 
+    singular: appconfigs  
     # kind is normally the CamelCased singular type. Your resource manifests use this.
     kind: AppConfig 
     # shortNames allow shorter string to match your resource on the CLI

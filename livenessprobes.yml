@@ -28,7 +28,7 @@ spec:
           httpGet:
             host:
             scheme: HTTP 
-            path: /do-not-exist
+            path: /
             httpHeaders:
               - name: Host 
                 value: application1.com 

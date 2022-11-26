@@ -11,7 +11,7 @@ spec:
     limits.memory: 2Gi
     pods: "4"
     secrets: "10"
-    service: "10"
+    services: "10"
     configmaps: "10"
 
   #kubectl apply -f quota.yml --namespace=dev

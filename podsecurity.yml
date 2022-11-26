@@ -5,7 +5,12 @@ apiVersion: v1
 kind: Pod #kubernetes entity
 metadata:
   name: container-with-security-context #inside your k8s cluster we need to create a pod.  
-spec: #inside my pod api i want to deploy a container
+spec:
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 3000
+    fsGroup: 2000
+ #inside my pod api i want to deploy a container
   volumes:
   - name: logs 
     emptyDir: {}
@@ -17,6 +22,8 @@ spec: #inside my pod api i want to deploy a container
     volumeMounts:
     - name: logs 
       mountPath: /var/log 
+    securityContext:
+      allowPrivilegeEscalation: false
 
       
     

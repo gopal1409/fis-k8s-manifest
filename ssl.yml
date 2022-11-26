@@ -4,7 +4,7 @@ metadata:
   name: "sslconfigs.blog.velotio.com"
 spec:
   group: "blog.velotio.com"
-  version: "v1alpha1"
+  version: "v1"
   scope: "Namespaced"
   names:
     plural: "sslconfigs"

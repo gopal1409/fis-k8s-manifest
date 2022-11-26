@@ -13,10 +13,10 @@ spec:
     kind: SslConfig
   validation:
     openAPIV3Schema:
-      required: [spec]
+      required: spec
       properties:
         spec:
-          required: [cert,key,domain]
+          required: cert,key,domain
           properties:
             cert:
               type: string

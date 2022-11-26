@@ -1,0 +1,17 @@
+apiVersion: v1 
+kind: ResourceQuota 
+metadata: 
+  name: compute-resources 
+  
+spec:
+  hard: 
+    requests.cpu: "1"  #any pod cannnot consume more than 1 core processor and 1GB of RAM
+    requests.memory: 1Gi 
+    limits.cpu: "2" #inside your namespace all pod can consume max 2 core cpu and 2gb of ram
+    limits.memory: 2Gi
+    pod: "4"
+    secrets: "10"
+    service: "10"
+    configmaps: "10"
+
+  #kubectl apply -f quota.yml --namespace=dev

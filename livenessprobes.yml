@@ -26,9 +26,9 @@ spec:
           successThreshold: 1
           failureThreshold: 1 
           httpGet:
-            host:
+            host: : ##3the pod is alive or not ping the 
             scheme: HTTP 
-            path: /
+            path: / #root path
             httpHeaders:
               - name: Host 
                 value: application1.com 

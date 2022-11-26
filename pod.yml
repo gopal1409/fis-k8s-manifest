@@ -17,6 +17,8 @@ spec: #inside my pod api i want to deploy a container
     volumeMounts:
     - name: logs 
       mountPath: /var/log 
+      resource: 
+      
     
   - name: log-exporter-sidecar
     image: nginx 
@@ -25,3 +27,4 @@ spec: #inside my pod api i want to deploy a container
     volumeMounts:
     - name: logs 
       mountPath: /usr/share/nginx/html
+   

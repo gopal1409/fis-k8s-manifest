@@ -11,7 +11,7 @@ spec:
     plural: sslconfigs
     singular: sslconfig
     kind: SslConfig
-  validation:
+  schema:
     openAPIV3Schema:
       required: spec
       properties:

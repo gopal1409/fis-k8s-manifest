@@ -27,7 +27,7 @@ spec:
           failureThreshold: 1 
           httpGet:
             host:
-              scheme: HTTP 
+            scheme: HTTP 
             path: /
             httpHeaders:
               - name: Host 

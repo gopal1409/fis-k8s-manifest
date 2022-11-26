@@ -1,11 +1,10 @@
+--- 
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
   name: k8s-probes
-
 spec: 
   replicas: 1 
-  
   selector: 
     matchLabels: 
       app: nginx
@@ -20,7 +19,6 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-
         ##create a deployment create liveness probes inside that create a pass and failure probes you need to do it in http request
         livenessProbe:
           initialDelaySeconds: 1

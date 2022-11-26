@@ -1,0 +1,8 @@
+apiVersion: 
+kind: AppConfig 
+metadata: 
+  name: demo-appconfig 
+spec:
+  uri: "some url"
+  command: "some command"
+  image: my-image 

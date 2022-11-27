@@ -7,9 +7,9 @@ metadata:
   name: container-with-security-context #inside your k8s cluster we need to create a pod.  
 spec:
   securityContext:
-    runAsUser: 1000
-    runAsGroup: 3000
-    fsGroup: 2000
+    runAsUser: gopal #gopal
+    runAsGroup: 3000 #gopal
+    fsGroup: 2000 #gopal
  #inside my pod api i want to deploy a container
   volumes:
   - name: logs 
@@ -24,7 +24,17 @@ spec:
       mountPath: /var/log 
     securityContext:
       allowPrivilegeEscalation: false
-
+  - name: appcontainer-2
+    image: alpine 
+    command: ["/bin/sh"]
+    args: ["-c","while true; do date >> /var/log/app.log; sleep 5; done"]
+    volumeMounts:
+    - name: logs 
+      mountPath: /var/log 
+    securityContext:
+      runAsUser: ghanshyam #container security contenxt
+      allowPrivilegeEscalation: false
+      
       
     
   

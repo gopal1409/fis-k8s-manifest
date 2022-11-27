@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-app-canary
+  labels:
+    app: myapp 
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    ##3enable canary and send 10% percent traffic to version2
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "10"
+spec:
+  ingressClassName: nginx 
+  rules:
+  - http:
+      paths:
+      - path: /my-app 
+        pathType: Prefix
+        backend:
+          service:
+            name: my-app-v2  ##actual service name
+            port:
+              number: 80
+      

@@ -8,7 +8,7 @@ spec:
     matchLabels:
       run: backend  
   policyTypes:
-  - ingress 
+  - Ingress 
   ingress:
   - from:
         

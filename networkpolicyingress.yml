@@ -9,9 +9,14 @@ spec:
       run: backend  
   policyTypes:
   - Ingress 
+  - Egress 
   ingress:
   - from:
-        
         - podSelector:
             matchLabels:
               run: frontend
+  egress:
+    - to:
+       - namespaceSelector:
+           matchLabels:
+             ns: cassandra 
